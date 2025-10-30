@@ -1,38 +1,91 @@
-📝 Questão 8: Sistema de Recomendação de Filmes
-Este projeto implementa um sistema para sugerir filmes a usuários com base em avaliações passadas.
+🩺 Questão 5 — Classificação de Doença Cardíaca
 
-Objetivo: Construir e comparar modelos de recomendação.
+Nesta atividade foi utilizado um dataset médico contendo variáveis como idade, pressão arterial e colesterol para prever a presença de doença cardíaca.
 
-Dataset: MovieLens.
+Modelo: Random Forest Classifier
 
-Técnicas: Foram implementados dois modelos de Filtragem Colaborativa: um baseado em similaridade entre usuários e outro em similaridade entre itens (filmes).
+Avaliação: Acurácia, Matriz de Confusão, Relatório de Classificação e Curva ROC
 
-Conclusão: A abordagem baseada em itens (Item-Based) se mostrou mais eficiente, apresentando uma menor margem de erro (RMSE e MAE).
+Resultado: Acurácia aproximada de 0.72
 
-🩺 Questão 9: Classificação de Imagens de Raio-X com CNNs
-Este projeto desenvolve um modelo de Deep Learning para classificar radiografias de tórax como "Normal" ou com "Pneumonia".
+Objetivo: Demonstrar como modelos de classificação podem auxiliar decisões clínicas.
 
-Objetivo: Criar um classificador de imagens médicas para auxiliar no diagnóstico de doenças pulmonares.
+🏠 Questão 6 — Previsão de Preços de Imóveis
 
-Dataset: Chest X-ray (Pneumonia) do Kaggle.
+Foi analisado um conjunto de dados contendo características estruturais e localização de imóveis para estimar seu preço de mercado.
 
-Técnicas: Foi construída uma Rede Neural Convolucional (CNN), utilizando técnicas de Data Augmentation para melhorar a generalização do modelo.
+Pré-processamento: StandardScaler (numéricas) + OneHotEncoder (categóricas)
 
-Conclusão: O modelo alcançou uma alta acurácia, demonstrando grande eficácia na identificação de casos de pneumonia.
+Modelos avaliados:
 
-⚠️ Necessário API do Kaggle: Assim como no projeto anterior, para executar este notebook, você precisará fazer o upload de um arquivo na primeira etapa "# Etapa 1: Configurar o ambiente e baixar o dataset de imagens" esse arquivo está nomeado como "kaggle.json" para baixar o dataset da competição do Kaggle.
+Regressão Linear
 
-📈 Questão 10: Previsão de Vendas Mensais
-Este projeto visa prever as vendas diárias de uma rede de varejo com base em dados históricos e características das lojas.
+XGBoost
 
-Objetivo: Prever o volume de vendas para otimizar o gerenciamento de estoque e recursos.
+Rede Neural (MLP)
 
-Dataset: Rossmann Store Sales do Kaggle.
+Métricas: RMSE e R²
 
-Técnicas: Foram aplicados três modelos de regressão: Regressão Linear, Árvore de Decisão e XGBoost. Foi realizada uma extensa etapa de Feature Engineering para extrair informações relevantes dos dados.
+Conclusão: A Regressão Linear apresentou o melhor desempenho (R² ≈ 0.88).
 
-Conclusão: O modelo XGBoost apresentou o melhor desempenho, com a menor margem de erro. As variáveis de maior impacto nas vendas foram a presença de promoções (Promo), o tipo de loja (StoreType) e o tipo de sortimento de produtos (Assortment).
+🛒 Questão 7 — Regras de Associação em Supermercado
 
-⚠️ Necessário API do Kaggle: Assim como no projeto anterior, para executar este notebook, você precisará fazer o upload de um arquivo na primeira etapa " # Etapa 1: Configurar o ambiente e baixar o dataset de vendas" esse arquivo está nomeado como "kaggle.json" para baixar o dataset da competição do Kaggle.
+Utilizando um dataset de listas de compras, foram descobertos padrões de coocorrência entre produtos.
+
+Técnicas: TransactionEncoder, Apriori, Regras de Associação (Lift)
+
+Exemplo de padrão encontrado: iogurte ↔ manteiga ↔ pão
+
+Aplicação prática: Estratégias de marketing e organização de prateleiras.
+
+🎬 Questão 8 — Sistema de Recomendação de Filmes
+
+Implementação de um sistema de recomendação baseado no dataset MovieLens.
+
+Método: Filtragem Colaborativa
+
+Abordagens comparadas:
+
+Similaridade entre usuários (User-Based)
+
+Similaridade entre itens (Item-Based)
+
+Resultado: O modelo Item-Based apresentou menor erro (MAE / RMSE).
+
+🩻 Questão 9 — Classificação de Imagens de Raio-X (CNN)
+
+Desenvolvimento de um modelo para identificar pneumonia em radiografias.
+
+Dataset: Chest X-ray (Pneumonia) — Kaggle
+
+Modelo: Rede Neural Convolucional (CNN) com Data Augmentation
+
+Resultado: Alta acurácia e boa capacidade de generalização
+
+⚠️ Importante: É necessário fazer upload do arquivo kaggle.json para baixar o dataset.
+
+🏪 Questão 10 — Previsão de Vendas Diárias (Time Series / ML)
+
+Modelo para prever vendas de lojas utilizando dados históricos e características comerciais.
+
+Dataset: Rossmann Store Sales — Kaggle
+
+Modelos avaliados: Regressão Linear, Árvore de Decisão e XGBoost
+
+Resultado: XGBoost apresentou o melhor desempenho
+
+Variáveis mais importantes: Promo, StoreType e Assortment
+
+⚠️ Importante: É necessário o arquivo kaggle.json para baixar os dados.
+
+🛠️ Tecnologias Utilizadas
+Biblioteca / Ferramenta	Uso
+Python	Linguagem base
+Pandas / NumPy	Manipulação e análise de dados
+Scikit-Learn	Modelos de ML e pré-processamento
+XGBoost	Regressão avançada e boosting
+Mlxtend	Regras de associação (Apriori)
+Matplotlib / Seaborn	Visualização de dados
+TensorFlow / Keras	Redes neurais e CNNs
 
 
